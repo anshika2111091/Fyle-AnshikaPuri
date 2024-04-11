@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <form id="taxForm" action="">
+        <h2>Tax Calculator</h2>
+        <div class="inputbox">
+            <input type="number" id="gross" min="0" required>
+            <label for="gross">Enter Gross Annual Income <span class="tooltip" aria-hidden="true" data-tooltip="This should include your total income before any deductions or taxes are applied."><i class="fas fa-question-circle"></i></span></label>
+        </div>
+        <div class="inputbox">
+            <input type="number" id="extra_income" min="0" required>
+            <label for="extra_income">Enter Extra Income <span class="tooltip" aria-hidden="true" data-tooltip="Enter any additional income apart from your gross annual income, if applicable."><i class="fas fa-question-circle"></i></span></label>
+        </div>
+        <div class="inputbox">
+            <input type="number" id="agegroup" min="0" required>
+            <label for="agegroup">Enter Age Group <span class="tooltip" aria-hidden="true" data-tooltip="Enter your age group in years."><i class="fas fa-question-circle"></i></span></label>
+        </div>
+        <div class="inputbox">
+            <input type="number" id="total_deduct" min="0" required>
+            <label for="total_deduct">Total Applicable Deductions <span class="tooltip" aria-hidden="true" data-tooltip="Enter the total deductions applicable to your income."><i class="fas fa-question-circle"></i></span></label>
+        </div>
+        <div class="inputbox">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    
+    <!-- Popover to display the tax result -->
+    <div id="taxResultPopover" class="popover">
+        <button id="closePopover">Close</button>
+        <span id="taxResult"></span>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
